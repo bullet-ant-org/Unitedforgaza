@@ -8,7 +8,7 @@ const galleryImages = [
     { id: 3, src: 'https://ichef.bbci.co.uk/news/480/cpsprodpb/2eb7/live/a02a6500-5fce-11f0-8a86-378d494e3c54.jpg.webp', alt: 'Volunteers distributing food' },
     { id: 4, src: 'https://static.independent.co.uk/2024/05/22/08/Israel_Palestinians_63667.jpg', alt: 'A makeshift school for refugee children' },
     { id: 5, src: 'https://www.middleeasteye.net/sites/default/files/images-story/Palestinian%20children%20hold%20posters%20during%20a%20protest%20in%20solidarity%20with%20children%20in%20the%20Gaza%20Strip%2C%20in%20the%20city%20of%20Ramallah%20on%20November%2C4%2C%202023-afp.jpg', alt: 'Medical staff attending to a patient' },
-    { id: 6, src: 'https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2023/06/1-2-scaled.jpg?ssl=1' }
+    { id: 6, src: 'https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2023/06/1-2-scaled.jpg?ssl=1', alt: 'A child holding a sign' }
 ];
 
 /**
@@ -93,4 +93,3 @@ camera
 };
 
 export default Gallery;
-

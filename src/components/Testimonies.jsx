@@ -4,37 +4,37 @@ import React, { useState, useEffect, useRef } from 'react';
 // Data for the testimonials section
 const testimonialsData = [
   {
-    imgSrc: 'https://bootdey.com/img/Content/avatar/avatar1.png',
+    imgSrc: 'https://www.bootdey.com/img/Content/avatar/avatar1.png',
     quote: 'The support we received was life-changing. We are immensely grateful for the hope and help provided during our darkest times.',
     name: 'Fatima Al-Masri',
     title: 'Gaza Resident & Mother'
   },
   {
-    imgSrc: 'https://bootdey.com/img/Content/avatar/avatar2.png',
+    imgSrc: 'https://www.bootdey.com/img/Content/avatar/avatar2.png',
     quote: 'As a volunteer, seeing the direct impact of these donations is overwhelming. Every contribution brings a smile and eases suffering.',
     name: 'Ahmed Khalil',
     title: 'Field Volunteer'
   },
   {
-    imgSrc: 'https://bootdey.com/img/Content/avatar/avatar3.png',
+    imgSrc: 'https://www.bootdey.com/img/Content/avatar/avatar3.png',
     quote: 'I never thought I would see my children get proper medical care. This organization is a lifeline for so many of us.',
     name: 'Aisha Yousef',
     title: 'Aid Recipient'
   },
   {
-    imgSrc: 'https://bootdey.com/img/Content/avatar/avatar4.png',
+    imgSrc: 'https://www.bootdey.com/img/Content/avatar/avatar4.png',
     quote: 'Donating from overseas, you hope your money makes a difference. Seeing these stories confirms that it truly does. Proud to be a supporter.',
     name: 'David Chen',
     title: 'International Donor - Canada'
   },
   {
-    imgSrc: 'https://bootdey.com/img/Content/avatar/avatar5.png',
+    imgSrc: 'https://www.bootdey.com/img/Content/avatar/avatar5.png',
     quote: 'The provision of clean water and food has been nothing short of a miracle for our community. Thank you for your tireless work.',
     name: 'Layla Ibrahim',
     title: 'Community Leader'
   },
   {
-    imgSrc: 'https://bootdey.com/img/Content/avatar/avatar6.png',
+    imgSrc: 'https://www.bootdey.com/img/Content/avatar/avatar6.png',
     quote: 'The transparency and dedication of this cause are why I continue to support it. You can see exactly where the help is going.',
     name: 'Maria Garcia',
     title: 'Monthly Supporter - Spain'
