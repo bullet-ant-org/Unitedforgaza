@@ -38,7 +38,7 @@ const Navbar = () => {
             <li className="nav-item"><a className="nav-link" href="/gallery">Gallery</a></li>
             <li className="nav-item"><a className="nav-link" href="/ourimpact">Our Impact</a></li>
             <li className="nav-item ms-lg-3">
-              <Link to="/#donate" className="btn btn-primary rounded-2 text-white" style={{ fontWeight: 'bold' }}>Donate Now</Link>
+              <Link to="/donate/information" className="btn btn-primary rounded-2 text-white" style={{ fontWeight: 'bold' }}>Donate Now</Link>
             </li>
           </ul>
         </div>
