@@ -49,6 +49,8 @@ const YourInformationPage = () => {
         paymentMethodId: null,
     });
 
+    const [isAnonymous, setIsAnonymous] = useState(false);
+
     // Load data from localStorage on component mount to pre-fill form
     useEffect(() => {
         const savedData = localStorage.getItem('donationData');
@@ -70,9 +72,22 @@ const YourInformationPage = () => {
         setFormData(prev => ({ ...prev, paymentMethodId: id }));
     };
 
+    const handleAnonymousToggle = (e) => {
+        const checked = e.target.checked;
+        setIsAnonymous(checked);
+        if (checked) {
+            // Clear personal info if user wants to be anonymous
+            setFormData(prev => ({
+                ...prev,
+                fullName: '',
+                email: '',
+                phoneNumber: ''
+            }));
+        }
+    };
+
     const handleContinue = () => {
-        // TODO: Add more robust validation here
-        if (!formData.fullName || !formData.email || !formData.amount || !formData.paymentMethodId) {
+        if ((!isAnonymous && (!formData.fullName || !formData.email)) || !formData.amount || !formData.paymentMethodId) {
             alert('Please fill all required fields, and select a donation amount and payment method.');
             return;
         }
@@ -82,6 +97,32 @@ const YourInformationPage = () => {
 
     return (
         <div className="your-information-page">
+            {/* Component-specific styles for the anonymous toggle and disabled inputs */}
+            <style>{`
+                .anonymous-toggle label {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    font-size: 0.95rem;
+                    color: #555;
+                }
+
+                .anonymous-toggle input[type="checkbox"] {
+                    margin-right: 10px;
+                    width: 18px;
+                    height: 18px;
+                    cursor: pointer;
+                }
+
+                .form-grid input:disabled,
+                .form-group input:disabled {
+                    background-color: #f2f2f2;
+                    cursor: not-allowed;
+                    border-color: #e0e0e0;
+                    color: #999;
+                }
+            `}</style>
+
             <TopLayout activeSection="information" />
 
             <div className="container donation-form-container">
@@ -91,19 +132,29 @@ const YourInformationPage = () => {
                         <span className="material-symbols-outlined icon-lg">person</span>
                         <h3>Your Information</h3>
                     </div>
+                    <div className="form-group anonymous-toggle">
+                        <label htmlFor="anonymousCheck">
+                            <input
+                                type="checkbox"
+                                id="anonymousCheck"
+                                checked={isAnonymous}
+                                onChange={handleAnonymousToggle}
+                            />
+                            I'd like to stay anonymous
+                        </label>
+                    </div>
                     <div className="form-grid">
                         <div className="form-group">
                             <label htmlFor="fullName">Full Name</label>
-                            <input type="text" id="fullName" name="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="Enter your full name" />
+                            <input type="text" id="fullName" name="fullName" value={formData.fullName} onChange={handleInputChange} placeholder="Enter your full name" disabled={isAnonymous} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email Address</label>
-                            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="you@example.com" />
+                            <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="you@example.com" disabled={isAnonymous} />
                         </div>
-                        
                     </div><div className="form-group">
                             <label htmlFor="phoneNumber">Phone Number</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} placeholder="(123) 456-7890" />
+                            <input type="tel" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} placeholder="(123) 456-7890" disabled={isAnonymous} />
                         </div>
                 </div>
 
