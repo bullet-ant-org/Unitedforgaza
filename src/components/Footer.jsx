@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --- Component-level Constants for easier maintenance ---
 const FOOTER_LINKS = [
@@ -24,7 +25,7 @@ const Footer = () => {
             <div className="footer_menu">
               <ul>
                 {FOOTER_LINKS.map(link => (
-                    <li key={link.name}><a href={link.href}>{link.name}</a></li>
+                    <li key={link.name}><Link to={link.href}>{link.name}</Link></li>
                 ))}
               </ul>
             </div>
