@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import 'animate.css';
 
 // --- Image Placeholders ---
@@ -193,10 +194,10 @@ const OurImpact = () => {
                         <p className="lead my-4 mx-auto" style={{ maxWidth: '600px' }}>
                             Your contribution has the power to change lives. Join us in our mission to bring hope and relief to Gaza.
                         </p>
-                        <a href="#donate" className="btn btn-primary btn-lg d-inline-flex align-items-center">
+                        <Link to="/#donate" className="btn btn-primary btn-lg d-inline-flex align-items-center">
                             <span className="material-symbols-outlined me-2">volunteer_activism</span>
                             Donate Now & Make a Difference
-                        </a>
+                        </Link>
                     </AnimatedElement>
                 </div>
             </section>
