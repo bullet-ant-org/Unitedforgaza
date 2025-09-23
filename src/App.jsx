@@ -13,7 +13,7 @@ import AboutUs from './components/AboutUs';
 import OurImpact from './components/OurImpact';
 import GalleryPage from './components/GalleryPage';
 
-
+import NotFoundPage from './components/NotFoundPage';
 import PaymentDetailsPage from './Donate/PaymentDetailsPage';
 import YourInformationPage from './Donate/YourInformationPage';
 import Thanks from './Donate/Thanks'; 
@@ -28,10 +28,11 @@ const App = () => {
         <Route path="/ourimpact" element={<><Navbar /><OurImpact /></>} />
         <Route path="/gallery" element={<><Navbar /><GalleryPage /></>} />
 
-
+        
         <Route path="/donate/information" element={<YourInformationPage />} />
         <Route path="/donate/payment" element={<PaymentDetailsPage />} />
         <Route path="/donate/thank-you" element={<Thanks />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       
     </Router>
