@@ -8,30 +8,30 @@ const hardcodedPaymentMethods = [
     {
         id: 'btc_bep20',
         name: 'Bitcoin',
-        network: 'Btc',
+        network: 'Bitcoin',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHGIbDs9XnVLYl1uGN2BRE_Y24DF0JsUXgoA&s', // Placeholder image
-        walletAddress: 'bc1q7q9qry8pjnhtymna2td62cxsxs97ydd9pwgj6y',
+        walletAddress: '1JAxVuGjyU6yxgKvfyFQRt1vxGiULjTeAk',
     },
     {
         id: 'eth_erc20',
         name: 'Ethereum',
-        network: 'ETH',
+        network: 'Ethereum',
         image: 'https://i.imgur.com/3a3d9D3.png', // Placeholder image
-        walletAddress: '0x9a0F9CD08C0b8b28cE3B07b9D4c0dd6DB7AfB3c0',
+        walletAddress: '0xD8F363fAff221c9b495001F56CAC7b4e4245C0B7',
     },
     {
         id: 'usdt_trc20',
         name: 'USDT',
         network: 'TRC20',
         image: 'https://i.imgur.com/D4CoW2b.png', // Placeholder image
-        walletAddress: 'TKVgcqXtD4WATG6FQ4UkuRzBp7WQLPtQGh',
+        walletAddress: 'TR8qgRbpSNpydpQ5B6eorZkgvu42gbiP7D',
     },
     {
         id: 'sol',
         name: 'Solana',
         network: 'SOL',
         image: 'https://i.imgur.com/D4CoW2b.png', // Placeholder image
-        walletAddress: '9GhJDSD7AdM74By6MebgQAp7jzZ4Spb6LRVBYGL1d6SJ',
+        walletAddress: '93dZDVzTfDC1co3BVGMbE7eVmBXxEPogqvXqZcjW3reJ',
     },
 ];
 

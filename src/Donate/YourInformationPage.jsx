@@ -9,14 +9,14 @@ const hardcodedPaymentMethods = [
     {
         id: 'btc_bep20',
         name: 'Bitcoin',
-        network: 'BEP20',
+        network: 'Bitcoin',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRy3YcL3EkYKkbglqzbNNRkA6ntNtThDnsw&s', // Placeholder image
         walletAddress: '0x1234...abcd',
     },
     {
         id: 'eth_erc20',
         name: 'Ethereum',
-        network: 'ERC20',
+        network: 'Ethereum',
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7icQv25VPT1aeohcCXy9UUFYnsaZbNV-Bg&s', // Placeholder image
         walletAddress: '0x5678...efgh',
     },
